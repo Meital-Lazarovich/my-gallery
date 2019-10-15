@@ -43,7 +43,7 @@ section h3.section-subheading {
 
 @media (min-width: 768px) {
     section {
-        padding: 150px 0;
+        padding: 100px 0;
     }
 }
 
@@ -53,7 +53,7 @@ section h3.section-subheading {
 }
 
 ::selection {
-    background: #fed136;
+    background: #607d8b;
     text-shadow: none;
 }
 
@@ -66,7 +66,13 @@ img::-moz-selection {
 }
 
 body {
-    -webkit-tap-highlight-color: #fed136;
+    -webkit-tap-highlight-color: #607d8b;
+}
+
+.fa-inverse {
+    color: #fff;
+    background-color: #607d8b;
+    border-radius: 50%;
 }
 
 .offcanvas-btn {
@@ -76,7 +82,9 @@ body {
     right: 3%;
     height: 50px;
     width: 50px;
-    background: #e2cb36;
+    background: #465d68;
+    color: white;
+    border: 1px solid #668492;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -93,7 +101,7 @@ body {
 .offcanvas-aside {
     position: fixed;
     height: 100%;
-    background: red;
+    background: #607d8b;
     width: 80vw;
     right: -80vw;
     z-index: 10;
@@ -102,6 +110,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+.offcanvas-aside h4 {
+    margin-left: 23px;
 }
 
 .offcanvas-aside img {
@@ -130,6 +142,10 @@ body {
     right: 0;
 }
 
+.btn-contact-submit {
+    cursor: pointer;
+}
+
 #mainNav {
     background-color: #222222;
     z-index: 5;
@@ -138,23 +154,25 @@ body {
 #mainNav .navbar-toggler {
     font-size: 12px;
     right: 0;
-    padding: 13px;
+    padding: 10px;
     text-transform: uppercase;
     color: white;
     border: 0;
-    background-color: #fed136;
+    background: #465d68;
+    border: 1px solid #668492;
+    font-size: 1em;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     cursor: pointer;
 }
 
 #mainNav .navbar-brand {
-    color: #fed136;
+    color: #91bbd0;
     font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-    color: #fec503;
+    color: #b2e5ff;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -165,10 +183,11 @@ body {
     color: white;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
+    font-weight: 500;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fed136;
+    color: #b2e5ff;
 }
 
 @media (min-width: 992px) {
@@ -238,8 +257,8 @@ header.masthead .intro-text .intro-heading {
 
 @media (min-width: 768px) {
     header.masthead .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
+        padding-top: 190px;
+        padding-bottom: 140px;
     }
     header.masthead .intro-text .intro-lead-in {
         font-size: 40px;
@@ -249,7 +268,7 @@ header.masthead .intro-text .intro-heading {
         font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
     header.masthead .intro-text .intro-heading {
-        font-size: 75px;
+        font-size: 60px;
         font-weight: 700;
         line-height: 75px;
         margin-bottom: 50px;
@@ -284,7 +303,7 @@ header.masthead .intro-text .intro-heading {
     -moz-transition: all ease 0.5s;
     transition: all ease 0.5s;
     opacity: 0;
-    background: rgba(254, 209, 54, 0.9);
+    background: rgba(96, 125, 139, 0.9);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
@@ -335,7 +354,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 .portfolio-modal li:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 @media (min-width: 767px) {
@@ -352,7 +371,7 @@ header.masthead .intro-text .intro-heading {
 
 .portfolio-modal .modal-content {
     min-height: 100%;
-    padding: 100px 0;
+    padding: 25px 0;
     text-align: center;
     border: none;
     border-radius: 0;
@@ -362,18 +381,18 @@ header.masthead .intro-text .intro-heading {
 }
 
 .portfolio-modal .modal-content h2 {
-    font-size: 3em;
-    margin-bottom: 15px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 .portfolio-modal .modal-content p {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .portfolio-modal .modal-content p.item-intro {
     font-size: 16px;
     font-style: italic;
-    margin: 20px 0 30px;
+    margin: 10px 0 27px;
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -383,7 +402,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 .portfolio-modal .modal-content img {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     height: 300px;
 }
 
@@ -698,7 +717,7 @@ ul.social-buttons li a {
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-    background-color: #fed136;
+    background-color: #607d8b;
 }
 
 .flex-align-center {
@@ -713,9 +732,9 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .btn-primary {
     font-weight: 700;
-    color: white;
-    border-color: #fed136;
-    background-color: #fed136;
+    color: #212529;
+    border-color: #3b6075;
+    background-color: #e6f6ff;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
@@ -728,8 +747,8 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .btn-primary:hover {
     color: white;
-    border-color: #f6bf01;
-    background-color: #fec503;
+    border-color: #3b6075;
+    background-color: #81a6ba;
 }
 
 .btn-primary.active, .btn-primary:active, .open>.btn-primary.dropdown-toggle {
@@ -764,8 +783,8 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     padding: 20px 40px;
     border-radius: 3px;
     color: white;
-    border-color: #fed136;
-    background-color: #fed136;
+    border-color: #334249;
+    background-color: #607d8b;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
@@ -778,8 +797,8 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .btn-xl:hover {
     color: white;
-    border-color: #f6bf01;
-    background-color: #fec503;
+    border-color: #6b8b9b;
+    background-color: #6b8d9d;
 }
 
 .btn-xl.active, .btn-xl:active, .open>.btn-xl.dropdown-toggle {
