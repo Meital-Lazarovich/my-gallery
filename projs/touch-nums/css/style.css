@@ -1,0 +1,93 @@
+@font-face {
+    font-family: gameFont;
+    src: url(../fonts/ShadowsIntoLight-Regular.ttf);
+}
+
+* {
+    font-family: gameFont;
+}
+
+body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    width: 30rem;
+    height: 30rem;
+    background-color: #ececec;
+    position: relative;
+}
+
+h2, h1 {
+    color: rgb(5, 132, 149);
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+h3 {
+    color: rgb(105, 97, 97);
+}
+
+table {
+    margin: 0 auto;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: .5s;
+    border: 2px #039db1 solid;
+    border-radius: 15px;
+    background-color: rgb(193, 248, 255);
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+.board td:not(.clicked):hover {
+    background-color: #e3f2f3;
+}
+
+.clicked {
+    background-color: #71b5be;
+    color: rgb(94, 93, 93);
+    cursor: auto;
+}
+
+.start {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.level {
+    font-size: 25px;
+}
+
+button {
+    border: 1px solid rgb(0, 144, 162);
+    padding: 10px;
+    margin-right: 10px;
+    transition: .5s;
+    color: rgb(6, 122, 137);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ececec;
+    font-size: 1.3em;
+}
+
+button:hover {
+    background-color: #d3f0f3;
+}
+
+.victory {
+    position: absolute;
+    top: 27%;
+    left: 21%;
+    background-color: #c4d3d5eb;
+    padding: 25px 80px;
+}

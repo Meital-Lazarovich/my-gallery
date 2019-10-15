@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Guess Who</title>
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <header class="box ">
+    <img src="img/layout/logo.png" class="mt-1"/>
+    <img src="img/speech-bubble/1.png" class="speech-bubble mt-5" style="display: none"/>
+    <h1 class="mt-2">Guess Who</h1>
+  </header>
+
+  <main>
+    <section class="game-start">
+      <h2 class="mb-4">Think of Someone...</h2>
+      <button onclick="onStartGuessing()" class="btn btn-lg btn-info">I'm Ready!</button>
+    </section>
+    <section class="quest" style="display: none">
+      <h4 style="display: none" class="text-secondary mb-3 mt-n5">My guess is...</h4>
+      <h2 class="mb-4"></h2>
+      <button onclick="onUserResponse('yes')" class="btn btn-info mr-1">Yes</button>
+      <button onclick="onUserResponse('no')" class="btn btn-danger">No</button>
+    </section>
+    <section class="end-game" style="display: none">
+      <img src="img/gif/fireworks.gif"/>
+      <h2 class="mb-4">Yes, I knew it!</h2>
+      <button onclick="onRestartGame()" class="btn btn-lg btn-info">Play Again</button>      
+    </section>
+    <section class="new-quest" style="display: none">
+      <h2 class="mb-3">OK, I give up... Teach me!</h2>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="newGuess" class="col-sm-8 control-label">You thought of: </label>
+          <div class="container">
+            <input name="newGuess" type="txt" class="form-control align-self-center" id="newGuess" placeholder="Your Guess" required>
+          </div>
+        </div>
+        <div class="form-group mb-4">
+          <label for="newQuest" class="col-sm-8 control-label">Question to differentiate</label>
+          <div class="container">
+            <input name="newQuest" type="txt" class="form-control align-self-center" id="newQuest" placeholder="The answer is YES for yours"
+              required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10 container">
+            <button type="submit" onclick="onAddGuess();return false;" class="btn btn-info align-self-center mr-2">
+              Make me Smarter!
+            </button>
+            <button onclick="onRestartGame()" class="btn btn-outline-secondary btn-sm">Cancle</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    cofferights &copy; 2019
+  </footer>
+
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/quest-service.js"></script>
+  <script src="js/quest-controller.js"></script>
+
+</body>
+
+</html>
